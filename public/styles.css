@@ -1,7 +1,19 @@
+body {
+  background-color: rgb(219, 219, 219);
+}
 .bg {
   background-color: #ee6e73;
 }
 form {
   padding: 20px;
   margin: 60px 20px 0px;
+}
+.note {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.noteslist {
+  padding: 20px;
+  margin-top: 60px;
 }
