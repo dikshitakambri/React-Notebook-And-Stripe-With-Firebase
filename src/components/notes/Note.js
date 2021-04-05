@@ -1,6 +1,7 @@
 import React from 'react';
 import {deleteNote, toggleFav} from '../../store/Reducers/noteAction';
 import {useDispatch} from 'react-redux';
+import {Link} from 'react-router-dom';
 import moment from 'moment';
 
 const Note = ({note}) => {
@@ -18,7 +19,9 @@ const Note = ({note}) => {
                 <i className="material-icons red-text" style={{cursor: 'pointer'}} onClick={toggleFavHandler} >{heartMarkup}</i>
                 <i className="material-icons" style={{cursor: 'pointer'}} onClick={deleteNoteHandler} >delete</i>
             </div>
-            <h5 className="black-text">{note.title}</h5>
+            <Link to={"/note/" + note.id}>
+                <h5 className="black-text">{note.title}</h5>
+            </Link>
             <p className="trucate">{note.content}</p>
             <p className="grey-text">{moment(note.createdAt.toDate()).fromNow()}</p>
             <div className="right-align">

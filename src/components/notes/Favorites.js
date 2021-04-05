@@ -9,7 +9,7 @@ const Favorites = () => {
     console.log(favnotes);
     return(
         <div>
-            <NoteList notes= {notes} />
+            <NoteList notes={favnotes} />
         </div>
     );
 }
