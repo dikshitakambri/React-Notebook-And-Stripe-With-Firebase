@@ -11,8 +11,8 @@ function NavbarComponent() {
           </NavbarBrand>
           <Nav className="mr-auto" navbar></Nav>
           <NavbarText>
-            <NavLink href="/favourites">
-              <b>Favourites</b>
+            <NavLink href="/favorites">
+              <b>Favorites</b>
             </NavLink>
           </NavbarText>
         </div>
