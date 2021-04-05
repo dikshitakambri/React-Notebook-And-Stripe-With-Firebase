@@ -4,8 +4,8 @@ import {addNote} from '../store/Reducers/noteAction';
 import {useDispatch} from 'react-redux';
 
 function Form() {
-  const [title, bindTitle, resetTitle] = UseInput();
-  const [content, bindContent, resetContent] = UseInput();
+  const [title, bindTitle, resetTitle] = UseInput("");
+  const [content, bindContent, resetContent] = UseInput("");
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -41,3 +41,16 @@ export const toggleFav = (note) => {
         })
     }
 }
+export const updateNote = (note) => {
+    return(dispatch,getState, {getFirestore}) => {
+        const firestore = getFirestore()
+        firestore.collection('notes').doc(note.id).update({
+            title: note.title,
+            content: note.content
+        }).then(() => {
+            console.log('toggle favorites icon');
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+}
